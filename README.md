@@ -24,7 +24,7 @@ pip install pygame
 
 Execute the following command to start the application:
 
-python main.py
+python aster.py
 
 ## Usage
 1 Setting Start and End Nodes
@@ -33,7 +33,7 @@ Left-Click: Click on a cell to set it as the start node (orange) if no start nod
 2 Placing Barriers
 
 Left-Click: Click on a cell to place a barrier (black) to block the path.
-## Removing Nodes and Barriers
+3 Removing Nodes and Barriers
 
 Right-Click: Click on a cell to remove barriers or reset the start/end nodes if clicked cells are the current start or end nodes.
 Running the Algorithm
@@ -45,13 +45,21 @@ C Key: Press the "C" key to clear the grid, resetting the start and end nodes, a
 
 ## Code Overview
 Node Class: Represents a cell in the grid with attributes and methods for visualization, neighbor updating, and state management.
+
 h(p1, p2): Heuristic function used in the A* algorithm to estimate the distance between two nodes.
+
 reconstruct_path(came_from, current, draw): Reconstructs the path from the end node to the start node once the path is found.
+
 algorithm(draw, grid, start, end): Implements the A* pathfinding algorithm to find and visualize the shortest path.
+
 make_grid(rows, width): Creates a grid of nodes.
+
 draw_grid(win, rows, width): Draws grid lines on the Pygame window.
+
 draw(win, grid, rows, width): Updates the Pygame window with the current state of the grid.
+
 get_clicked_pos(pos, rows, width): Converts mouse click positions to grid cell coordinates.
+
 main(win, width): Main function to run the Pygame loop, handle events, and manage user interactions.
 
 ## Contributing
